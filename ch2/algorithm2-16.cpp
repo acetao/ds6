@@ -6,9 +6,9 @@ void dels(LinkNode *&L)
 	LinkNode *p = L->next, *q;
 	while (p->next != NULL)
 	{
-		if (p->data == p->next->data)		//找到重复值的结点
+		if (p->data == p->next->data)	//找到重复值的结点
 		{
-			q = p->next;					//q指向这个重复值的结点
+			q = p->next;				//q指向这个重复值的结点
 			p->next = q->next;			//删除*q结点
 			free(q);
 		}
@@ -26,5 +26,5 @@ int main()
 	dels(L);
 	printf("L:"); DispList(L);
 	DestroyList(L);
-	return 1;
+	return 0;
 }
