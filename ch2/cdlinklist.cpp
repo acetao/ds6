@@ -28,8 +28,8 @@ void CreateListF(DLinkNode *&L, ElemType a[], int n)
 	s = L->next;
 	while (s->next != NULL)			//查找尾结点,由s指向它
 		s = s->next;
-	s->next = L;						//尾结点next域指向头结点
-	L->prior = s;						//头结点的prior域指向尾结点
+	s->next = L;					//尾结点next域指向头结点
+	L->prior = s;					//头结点的prior域指向尾结点
 
 }
 
@@ -47,8 +47,8 @@ void CreateListR(DLinkNode *&L, ElemType a[], int n)
 		r->next = s; s->prior = r;	//将结点s插入结点r之后
 		r = s;
 	}
-	r->next = L;				//尾结点next域指向头结点
-	L->prior = r;				//头结点的prior域指向尾结点
+	r->next = L;			//尾结点next域指向头结点
+	L->prior = r;			//头结点的prior域指向尾结点
 }
 
 void InitList(DLinkNode *&L)
@@ -101,7 +101,7 @@ bool GetElem(DLinkNode *L, int i, ElemType &e)
 {
 	int j = 0;
 	DLinkNode *p;
-	if (L->next != L)		//双链表不为空表时
+	if (L->next != L)	//双链表不为空表时
 	{
 		if (i == 1)
 		{
@@ -190,11 +190,11 @@ bool ListDelete(DLinkNode *&L, int i, ElemType &e)
 {
 	int j = 0;
 	DLinkNode *p = L, *q;
-	if (p->next != L)					//原双链表不为空表时
+	if (p->next != L)				//原双链表不为空表时
 	{
 		if (i == 1)					//i==1时
 		{
-			q = L->next;				//删除第1个结点
+			q = L->next;			//删除第1个结点
 			e = q->data;
 			L->next = q->next;
 			q->next->prior = L;
@@ -213,8 +213,8 @@ bool ListDelete(DLinkNode *&L, int i, ElemType &e)
 				return false;
 			else						//找到第i-1个结点p
 			{
-				q = p->next;				//q指向要删除的结点
-				if (q == NULL) return 0;	//不存在第i个结点
+				q = p->next;			//q指向要删除的结点
+				if (q == NULL) return 0;//不存在第i个结点
 				e = q->data;
 				p->next = q->next;		//从单链表中删除q结点
 				if (p->next != NULL) p->next->prior = p;
