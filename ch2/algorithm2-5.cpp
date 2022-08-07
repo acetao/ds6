@@ -43,5 +43,5 @@ int main()
 	move1(L);
 	printf("L:"); DispList(L);
 	DestroyList(L);
-	return 1;
+	return 0;
 }
