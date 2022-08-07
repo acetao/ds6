@@ -22,5 +22,5 @@ int main()
 	printf("L:"); DispList(L);
 	printf("结点值为%d的结点个数:%d\n", x, count(L, x));
 	DestroyList(L);
-	return 1;
+	return 0;
 }
