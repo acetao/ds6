@@ -30,12 +30,12 @@ void CreateTable(HList *&h)
 	{
 		printf("  第%d行:", i + 1);
 		s = (DList *)malloc(sizeof(DList));	//创建数据结点
-		for (j = 0; j < h->Col; j++)				//输入一行的数据初步统计
+		for (j = 0; j < h->Col; j++)		//输入一行的数据初步统计
 			scanf("%d", &s->data[j]);
-		if (h->next == NULL)					//插入第一个数据结点
+		if (h->next == NULL)				//插入第一个数据结点
 			h->next = s;
 		else								//插入其他数据结点
-			r->next = s;						//将结点s插入到结点r结点之后
+			r->next = s;					//将结点s插入到结点r结点之后
 		r = s;								//r始终指向最后一个数据结点
 	}
 	r->next = NULL;							//表尾结点next域置空
