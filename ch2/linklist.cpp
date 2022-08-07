@@ -36,7 +36,7 @@ void CreateListR(LinkNode *&L, ElemType a[], int n)
 	{
 		s = (LinkNode *)malloc(sizeof(LinkNode)); //创建新结点s
 		s->data = a[i];
-		r->next = s;			//将结点s插入结点r之后
+		r->next = s;		//将结点s插入结点r之后
 		r = s;
 	}
 	r->next = NULL;			//终端结点next域置为NULL
