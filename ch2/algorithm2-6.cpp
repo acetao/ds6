@@ -36,5 +36,5 @@ int main()
 	printf("L2:"); DispList(L2);
 	DestroyList(L1);
 	DestroyList(L2);
-	return 1;
+	return 0;
 }
