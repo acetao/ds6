@@ -163,7 +163,7 @@ bool ListDelete(DLinkNode *&L, int i, ElemType &e)
 		return false;
 	else						//找到第i-1个结点p
 	{
-		q = p->next;				//q指向要删除的结点
+		q = p->next;			//q指向要删除的结点
 		if (q == NULL)
 			return false;		//不存在第i个结点
 		e = q->data;
