@@ -30,5 +30,5 @@ int main()
 	else
 		printf("L是不对称的\n");
 	DestroyList(L);
-	return 1;
+	return 0;
 }
