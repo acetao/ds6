@@ -32,5 +32,5 @@ int main()
 	else
 		printf("循环双链表L中不存在元素值为%d的结点\n", x);
 	DestroyList(L);
-	return 1;
+	return 0;
 }
