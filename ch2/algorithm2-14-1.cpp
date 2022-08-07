@@ -47,6 +47,6 @@ int main()
 	DestroyList(L1);
 	DestroyList(L2);
 	DestroyList(L3);
-	return 1;
+	return 0;
 }
 
