@@ -38,5 +38,5 @@ int main()
 	delnode2(L, x);
 	printf("L:"); DispList(L);
 	DestroyList(L);
-	return 1;
+	return 0;
 }
