@@ -26,7 +26,7 @@ void CreateListF(LinkNode *&L, ElemType a[], int n)
 	s = L->next;
 	while (s->next != NULL)			//查找尾结点,由s指向它
 		s = s->next;
-	s->next = L;						//尾结点next域指向头结点
+	s->next = L;					//尾结点next域指向头结点
 
 }
 
@@ -41,10 +41,10 @@ void CreateListR(LinkNode *&L, ElemType a[], int n)
 	{
 		s = (LinkNode *)malloc(sizeof(LinkNode)); //创建新结点
 		s->data = a[i];
-		r->next = s;			//将结点s插入结点r之后
+		r->next = s;		//将结点s插入结点r之后
 		r = s;
 	}
-	r->next = L;				//尾结点next域指向头结点
+	r->next = L;			//尾结点next域指向头结点
 }
 
 void InitList(LinkNode *&L)
@@ -96,7 +96,7 @@ bool GetElem(LinkNode *L, int i, ElemType &e)
 {
 	int j = 0;
 	LinkNode *p;
-	if (L->next != L)		//单链表不为空表时
+	if (L->next != L)	//单链表不为空表时
 	{
 		if (i == 1)
 		{
@@ -143,7 +143,7 @@ bool ListInsert(LinkNode *&L, int i, ElemType e)
 {
 	int j = 0;
 	LinkNode *p = L, *s;
-	if (p->next == L || i == 1)		//原单链表为空表或i==1时
+	if (p->next == L || i == 1)	//原单链表为空表或i==1时
 	{
 		s = (LinkNode *)malloc(sizeof(LinkNode));	//创建新结点s
 		s->data = e;
@@ -165,7 +165,7 @@ bool ListInsert(LinkNode *&L, int i, ElemType e)
 		{
 			s = (LinkNode *)malloc(sizeof(LinkNode));	//创建新结点s
 			s->data = e;
-			s->next = p->next;						//将结点s插入到结点p之后
+			s->next = p->next;	//将结点s插入到结点p之后
 			p->next = s;
 			return true;
 		}
@@ -176,11 +176,11 @@ bool ListDelete(LinkNode *&L, int i, ElemType &e)
 {
 	int j = 0;
 	LinkNode *p = L, *q;
-	if (p->next != L)					//原单链表不为空表时
+	if (p->next != L)				//原单链表不为空表时
 	{
 		if (i == 1)					//i==1时
 		{
-			q = L->next;				//删除第1个结点
+			q = L->next;			//删除第1个结点
 			e = q->data;
 			L->next = q->next;
 			free(q);
@@ -198,7 +198,7 @@ bool ListDelete(LinkNode *&L, int i, ElemType &e)
 				return false;
 			else					//找到第i-1个结点p
 			{
-				q = p->next;			//q指向要删除的结点
+				q = p->next;		//q指向要删除的结点
 				e = q->data;
 				p->next = q->next;	//从单链表中删除q结点
 				free(q);			//释放q结点
