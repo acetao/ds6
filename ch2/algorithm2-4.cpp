@@ -2,7 +2,8 @@
 #include "sqlist.cpp"
 
 void swap(int &x, int &y)				//交换x和y
-{	int tmp = x;
+{	
+	int tmp = x;
 	x = y; y = tmp;
 }
 
@@ -47,5 +48,5 @@ int main()
 	move1(L);
 	printf("L:"); DispList(L);
 	DestroyList(L);
-	return 1;
+	return 0;
 }
