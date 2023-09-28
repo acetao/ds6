@@ -12,6 +12,7 @@ void prt(int *arr, int n) {
   printf("\n");
 }
 
+//将有序序列arr[left..mid]、arr[mid+1..right]合并成有序序列arr[left..right]
 void Merge(int *arr, int left, int mid, int right) {
   int i = left, j = mid + 1, k = 0;
   int brr[right - left + 1]; //辅助数组
@@ -37,7 +38,7 @@ void Merge_Sort(int *arr, int left, int right) {
   int mid = left + (right - left) / 2; //左右半段分界点
   Merge_Sort(arr, left, mid);          //递归对左半段进行合并排序
   Merge_Sort(arr, mid + 1, right);     //递归对右半段进行合并排序
-  Merge(arr, left, mid, right);        //合并
+  Merge(arr, left, mid, right);        //合并arr[left..mid]、arr[mid+1..right]
 }
 
 int main(int argc, char *argv[]) {
@@ -46,7 +47,7 @@ int main(int argc, char *argv[]) {
     a[i] = i;
   // shuffle
   random_shuffle(a, a + n); //随机打乱
-   
+
   //随机打乱后的结果
   prt(a, n);
 
